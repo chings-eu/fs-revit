@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F487378-443F-44AF-B21A-15DB7CE39C9B}</ProjectGuid>
+    <UseStandardResourceNames>true</UseStandardResourceNames>
+    <OutputType>Library</OutputType>
+    <RootNamespace>fsrevit</RootNamespace>
+    <AssemblyName>fs-revit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget></PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateTailCalls>true</GenerateTailCalls>
+    <PlatformTarget></PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '10.0' OR '$(VisualStudioVersion)' == '11.0'">
+    <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="FSharp.Core">
+      <HintPath>..\packages\FSharp.Core.4.3.3\lib\net45\FSharp.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Script.fsx" />
+    <None Include="packages.config" />
+    <Compile Include="cmds\01_aSimpleMessage.fs" />
+    <Compile Include="cmds\02_selectedElement.fs" />
+    <Compile Include="cmds\03_createLines.fs" />
+    <Compile Include="cmds\04_filterSimilarElementsByFamily.fs" />
+    <Compile Include="cmds\05_createFloorByRoom.fs" />
+    <Compile Include="cmds\06_filterSelectedElementsByCategory.fs" />
+    <Compile Include="cmds\07_syncSectionBox.fs" />
+    <Compile Include="cmds\08_fitWorkset.fs" />
+    <Compile Include="cmds\09_findSumOfLineLength.fs" />
+    <Compile Include="cmds\10_findSumOfRoomArea.fs" />
+    <Compile Include="cmds\11_fitColorOfOptionElement.fs" />
+    <Compile Include="cmds\12_loadPythonScript.fs" />
+    <Compile Include="cmds\13_findSumLengthOfLinearElement.fs" />
+    <Compile Include="cmds\14_viewRoomReference.fs" />
+    <Compile Include="cmds\15_findDoorOpenDirection.fs" />
+    <Compile Include="cmds\16_syncOpened3dView.fs" />
+    <Compile Include="cmds\17_purgeDuplicatedFillpattern.fs" />
+    <Compile Include="cmds\18_purgeUnusedTypes.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cmds\" />
+  </ItemGroup>
+  <Import Project="$(FSharpTargetsPath)" />
+</Project>
