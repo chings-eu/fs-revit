@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Assembly>fs-revit.dll</Assembly>
+	<FullClassName>TYB.Tutorial.FSRevit.ASimpleMessage</FullClassName>
+    <AddInId>04a6882f-6d70-408b-b9bb-c7391c733a5f</AddInId>
+	<Name></Name>
+	<Text>Level01: Revit Returns A Simple Message</Text>
+    <VendorId>TYB</VendorId>
+	<VendorDescription>tailoryourbim.com</VendorDescription>
+	<Description></Description>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+    <Discipline>Any</Discipline>
+	<AvailabilityClassName></AvailabilityClassName>
+	<LargeImage></LargeImage>
+	<SmallImage></SmallImage>
+	<LongDescription></LongDescription>
+	<TooltipImage></TooltipImage>
+    <LanguageType></LanguageType>
+	<AllowLoadIntoExistingSession></AllowLoadIntoExistingSession>
+  </AddIn>
+</RevitAddIns>

@@ -1,0 +1,1 @@
+/Users/ching/Dropbox/tutorials/fs-revit/obj/Debug/fs-revit.fsprojResolveAssemblyReference.cache
